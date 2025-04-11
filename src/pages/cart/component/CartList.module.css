@@ -1,0 +1,131 @@
+.container {
+  width: 600px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.count {
+  margin-left: 25px;
+  font-size: 14px;
+  color: #888;
+}
+
+.count span {
+  color: red
+}
+
+.resetBtn {
+  font-size: 10px;
+  color: #9d9d9d;
+  background: transparent;
+  border: 1px solid #c3c3c3;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 3px;
+}
+
+.list {
+  background-color: #fff;
+  border: 10px solid #ededed;
+  padding: 15px 20px;
+  border-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  max-height: 450px;
+}
+
+.empty {
+    color: #888;
+    text-align: left;
+    font-size: 12px;
+}
+
+.summary {
+  background: #f9f9f9;
+  padding: 20px;
+  padding-bottom: 0;
+  border-radius: 15px;
+  border: 10px solid #f9f9f9;
+  font-size: 14px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #888;
+}
+
+.totalPrice {
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  align-items: flex-end;
+  color: black;
+}
+
+.total {
+  color: red;
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+}
+
+.removeBtn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 0 15px;
+}
+  
+.removeBtn:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.fixCount{
+    display: flex;
+    align-items: center;
+    border: 1px solid #b0b0b0;
+    border-radius: 3px;
+}
+
+.fixCount span {
+    font-size: 12px;
+    padding: 0 10px;
+    border-left:1px solid #b0b0b0;
+    border-right: 1px solid #b0b0b0;
+}

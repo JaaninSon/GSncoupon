@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+}
+
+.dropdown {
+    width: 50%;
+}
+
+.dropdownToggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;  
+    width: 100%;
+}
+
+.dropdownToggle::after {
+    content: '';
+    display: inline-block;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 7px solid black;
+    border-right: 5px solid transparent;
+    transform: translateY(5px)  rotate(90deg);
+}
