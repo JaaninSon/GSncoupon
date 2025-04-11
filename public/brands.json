@@ -1,0 +1,72 @@
+[
+  {
+    "id": "all",
+    "name": "전체상품",
+    "logo": "https://i.ibb.co/KpnPzpM2/28-Kf-Qc9tyy-V.png"
+  },
+  {
+    "id": "starbucks",
+    "name": "스타벅스",
+    "logo": "https://i.ibb.co/1tqB43Qc/Starbucks.png"
+  },
+  {
+    "id": "gongcha",
+    "name": "공차",
+    "logo": "https://i.ibb.co/VY7gfkzt/GongCha.png"
+  },
+  {
+    "id": "twosome",
+    "name": "투썸플레이스",
+    "logo": "https://i.ibb.co/PGG5srQb/ATwo-Some-Place.png"
+  },
+  {
+    "id": "megacoffe",
+    "name": "메가MGC커피",
+    "logo": "https://i.ibb.co/d42BdVX9/Mega.jpg"
+  },
+  {
+    "id": "compose",
+    "name": "컴포즈커피",
+    "logo": "https://i.ibb.co/Z0vFsW8/Compose.png"
+  },
+  {
+    "id": "ediya",
+    "name": "이디야커피",
+    "logo": "https://i.ibb.co/nMqRBx8k/Ediya.png"
+  },
+  {
+    "id": "hollys",
+    "name": "할리스",
+    "logo": "https://i.ibb.co/Kcq4NHHN/Hollys.png"
+  },
+  {
+    "id": "theventi",
+    "name": "더벤티",
+    "logo": "https://i.ibb.co/cS9dq5DY/TheVenti.png"
+  },
+  {
+    "id": "paik",
+    "name": "빽다방",
+    "logo": "https://i.ibb.co/XwcS3SN/Paik.png"
+  },
+  {
+    "id": "coffeebean",
+    "name": "커피빈",
+    "logo": "https://i.ibb.co/V04GHSpM/Coffee-Bean.png"
+  },
+  {
+    "id": "paulbasset",
+    "name": "폴바셋",
+    "logo": "https://i.ibb.co/08TKMVS/Paul-Basset.png"
+  },
+  {
+    "id": "tomntoms",
+    "name": "탐앤탐스",
+    "logo": "https://i.ibb.co/BVKJxDdZ/TomNToms.png"
+  },
+  {
+    "id": "caffebene",
+    "name": "카페베네",
+    "logo": "https://i.ibb.co/chTW4xqN/Caffe-Bene.jpg"
+  }
+]
