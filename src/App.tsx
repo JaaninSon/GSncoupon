@@ -1,8 +1,8 @@
 import React from "react";
-import { FilterProvider } from "./components/filter/FilterContext";
-import Filter from "./components/filter/Filter";
-import ProductList from "./components/product_list/ProductList";
-import ErrorBoundary from "./components/filter/ErrorBoundary";
+import { FilterProvider } from "./pages/detail/filter/FilterContext";
+import Filter from "./pages/detail/filter/Filter";
+import ProductList from "./pages/detail/product_list/ProductList";
+import ErrorBoundary from "./pages/detail/filter/ErrorBoundary";
 import "./App.css";
 
 const App: React.FC = () => {
