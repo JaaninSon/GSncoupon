@@ -1,0 +1,13 @@
+.breadCrumb {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  gap: 1rem;
+
+  color: rgb(147, 147, 147);
+}
+
+.title {
+  color: black;
+  font-weight: bold;
+}
