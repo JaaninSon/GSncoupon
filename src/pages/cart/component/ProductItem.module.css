@@ -32,16 +32,17 @@
 .price {
   margin-top: 8px;
   font-size: 12px;
+  color: var(--color-black);
   font-weight: bold;
 }
 
 .originalPrice {
   text-decoration:line-through;
-  color: #b0b0b0;
+  color: var(--color-text-disabled);
   margin-right: 10px;
 }
 
 .discount {
-  color: red;
+  color: var(--color-red);
   margin-left: 15px;
 }

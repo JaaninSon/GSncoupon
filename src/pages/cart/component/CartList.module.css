@@ -2,6 +2,11 @@
   width: 600px;
 }
 
+.container h2 {
+    font-size: 22px;
+    color: var(--color-black);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -12,26 +17,24 @@
 .count {
   margin-left: 25px;
   font-size: 14px;
-  color: #888;
+  color: var(--color-gray);
 }
 
 .count span {
-  color: red
+  color: var(--color-red);
 }
 
 .resetBtn {
   font-size: 10px;
-  color: #9d9d9d;
   background: transparent;
-  border: 1px solid #c3c3c3;
+  border: 1px solid var(--color-outline1);
   cursor: pointer;
   padding: 8px 15px;
   border-radius: 3px;
 }
 
 .list {
-  background-color: #fff;
-  border: 10px solid #ededed;
+  border: 10px solid var(--color-outline2);
   padding: 15px 20px;
   border-radius: 15px;
   border-bottom-left-radius: 0;
@@ -40,18 +43,17 @@
 }
 
 .empty {
-    color: #888;
     text-align: left;
     font-size: 12px;
     padding: 15px 20px;
 }
 
 .summary {
-  background: #f9f9f9;
+  background: var(--color-bg1);
   padding: 20px;
   padding-bottom: 0;
   border-radius: 15px;
-  border: 10px solid #f9f9f9;
+  border: 10px solid var(--color-bg1);
   font-size: 12px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -61,22 +63,21 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  color: #888;
 }
 
 .totalPrice {
   padding-top: 10px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--color-outline1);
   display: flex;
   justify-content: space-between;
   font-size: 16px;
   font-weight: bold;
   align-items: flex-end;
-  color: black;
+  color:var(--color-black);
 }
 
 .total {
-  color: red;
+  color: var(--color-red);
   font-size: 20px;
 }
 
@@ -107,32 +108,31 @@
 .removeBtn {
     width: 30px;
     height: 30px;
-    border: 1px solid #b0b0b0;
+    border: 1px solid var(--color-outline1);
     border-radius: 5px;
     font-weight: bold;
-    background-color: #fff;
     cursor: pointer;
     margin: 0 15px;
     transition: all 0.25s ease;
 }
   
 .removeBtn:hover {
-    background-color: #444;
-    color: #fff;
+    background-color: var(--color-header-bg);
+    color: var(--color-white);
 }
 
 .fixCount{
     display: flex;
     align-items: center;
-    border: 1px solid #b0b0b0;
+    border: 1px solid var(--color-outline1);
     border-radius: 3px;
 }
 
 .fixCount span {
     font-size: 12px;
     padding: 0 10px;
-    border-left:1px solid #b0b0b0;
-    border-right: 1px solid #b0b0b0;
+    border-left:1px solid var(--color-outline1);
+    border-right: 1px solid var(--color-outline1);
 }
 .countBtn {
     padding: 0 6px;

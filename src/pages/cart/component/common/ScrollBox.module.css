@@ -8,11 +8,11 @@
 }
 
 .scrollBox::-webkit-scrollbar-track {
-  background: #f0efef;
+  background: var(--color-outline2);
   border-radius: 4px;
 }
 
 .scrollBox::-webkit-scrollbar-thumb {
-  background-color: #bbb;
+  background-color: var(--color-gray);
   border-radius: 4px;
 }

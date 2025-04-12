@@ -1,6 +1,7 @@
 .btn {
   width: 180px;
   font-size: 16px;
+  font-weight: bold;
   padding: 15px;
   border-radius: 6px;
   border: none;
@@ -8,17 +9,17 @@
 }
 
 .black {
-  background-color: #444;
-  color: #fff;
+  background-color: var(--color-header-bg);
+  color:  var(--color-white);
 }
 
 .green {
-  background-color: #4caf50;
-  color: white;
+  background-color:var(--color-primary);
+  color: var(--color-white);
 }
 
 .transparent {
   background-color: transparent;
-  border: 1px solid #444;
-  color: #444;;
+  border: 1px solid var(--color-header-bg);
+  color: var(--color-header-bg);
 }
