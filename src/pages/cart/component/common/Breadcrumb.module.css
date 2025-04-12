@@ -4,10 +4,10 @@
   font-size: 0.8rem;
   gap: 1rem;
 
-  color: rgb(147, 147, 147);
+  color: var(--color-text-disabled)
 }
 
 .title {
-  color: black;
   font-weight: bold;
+  color:var(--color-basic);
 }
