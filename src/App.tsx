@@ -1,27 +1,17 @@
-import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import MainPage from "./pages/Main/MainPage";
 import { FilterProvider } from "./pages/detail/filter/FilterContext";
-import Filter from "./pages/detail/filter/Filter";
-import ProductList from "./pages/detail/product_list/ProductList";
-import ErrorBoundary from "./pages/detail/filter/ErrorBoundary";
-import "./App.css";
-import CartPage from "./pages/cart/CartPage";
+import Nav from "./pages/Main/Nav";
 
-const App: React.FC = () => {
+function App() {
     return (
-        <ErrorBoundary>
+        <BrowserRouter>
             <FilterProvider>
-                <div className="app">
-                    <div className="container">
-                        {/* <Filter />
-                        <div className="product-section">
-                            <ProductList />
-                        </div> */}
-                        <CartPage />
-                    </div>
-                </div>
+                <Nav />
+                <Routes>{/* <Route path="/" element={<MainPage />} /> */}</Routes>
             </FilterProvider>
-        </ErrorBoundary>
+        </BrowserRouter>
     );
-};
+}
 
 export default App;
