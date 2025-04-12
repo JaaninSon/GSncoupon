@@ -36,13 +36,14 @@
   border-radius: 15px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  max-height: 450px;
+  max-height: 480px;
 }
 
 .empty {
     color: #888;
     text-align: left;
     font-size: 12px;
+    padding: 15px 20px;
 }
 
 .summary {
@@ -51,7 +52,7 @@
   padding-bottom: 0;
   border-radius: 15px;
   border: 10px solid #f9f9f9;
-  font-size: 14px;
+  font-size: 12px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -59,12 +60,12 @@
 .summary div {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #888;
 }
 
 .totalPrice {
-  padding-top: 15px;
+  padding-top: 10px;
   border-top: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
@@ -76,7 +77,7 @@
 
 .total {
   color: red;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .buttons {
@@ -93,6 +94,9 @@
     align-items: center;
     width: 100%;
     padding: 5px;
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+    
+    transition: all 0.25s ease;
 }
 
 .btns {
@@ -109,6 +113,7 @@
     background-color: #fff;
     cursor: pointer;
     margin: 0 15px;
+    transition: all 0.25s ease;
 }
   
 .removeBtn:hover {
@@ -128,4 +133,8 @@
     padding: 0 10px;
     border-left:1px solid #b0b0b0;
     border-right: 1px solid #b0b0b0;
+}
+.countBtn {
+    padding: 0 6px;
+    font-size: 14px;
 }

@@ -1,14 +1,14 @@
 import styles from "./CartPage.module.css";
-import BreadCrumb from "../../components/Breadcrumb";
+import BreadCrumb from "./component/common/Breadcrumb";
 import CartList from "./component/CartList";
-import Products from "./component/Products";
+import ProductsView from "./component/ProductsView";
 
 export default function CartPage() {
     return (
         <div className={styles.container}>
             <BreadCrumb title="온라인견적서" />
             <div className={styles.pageWrapper}>
-                <Products />
+                <ProductsView />
                 <CartList />
             </div>
         </div>

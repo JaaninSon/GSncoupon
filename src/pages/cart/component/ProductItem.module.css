@@ -7,6 +7,8 @@
 .container img {
   width: 90px;
   height: 90px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .info {
@@ -14,12 +16,23 @@
   flex-direction: column;
   align-items: flex-start;
   margin-left: 20px;
-  font-size: 14px;
+  font-size: 13px;
+}
+
+.name {  
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.name:hover {
+  text-decoration: underline;
 }
 
 .price {
   margin-top: 8px;
   font-size: 12px;
+  font-weight: bold;
 }
 
 .originalPrice {

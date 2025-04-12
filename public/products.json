@@ -915,18 +915,6 @@
         "location": "대전"
     },
     {
-        "id": 100,
-        "coupon_name": "폴바셋 아메리카노",
-        "brand_name": "폴바셋",
-        "price": 5300,
-        "category": "커피",
-        "discount_rate": 10,
-        "image": "https://i.ibb.co/hR0B5qRj/20240902-CP1725245003000832.jpg",
-        "brand_image": "PaulBasset",
-        "expiry_date": "60",
-        "location": "대전"
-    },
-    {
         "id": 101,
         "coupon_name": "폴바셋 카페라떼",
         "brand_name": "폴바셋",

@@ -7,6 +7,7 @@
 
 .dropdown {
     width: 50%;
+    position: relative;
 }
 
 .dropdownToggle {
@@ -30,4 +31,24 @@
     border-left: 7px solid black;
     border-right: 5px solid transparent;
     transform: translateY(5px)  rotate(90deg);
+}
+
+.brandContainer{ 
+    position: absolute;   
+    width: 500px;
+    top: 40px;
+    right: 0;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #fff;
+    border: 2px solid #e2e2e2;
+    
+    box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.1);
+}
+
+.brandGrid { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding-right: 1rem;
 }

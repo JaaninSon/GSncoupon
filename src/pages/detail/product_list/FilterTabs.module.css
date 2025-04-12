@@ -1,0 +1,24 @@
+.filterContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.filterButton {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  color: #6b7280;
+}
+
+.activeFilter {
+  color: black;
+  font-weight: 700;
+  border-bottom-width: 2px;
+  border-color: black;
+  text-decoration: underline #22c55e;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
+}
