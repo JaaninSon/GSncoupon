@@ -17,15 +17,15 @@
   --color-text-disabled: #AAA;
 
   --color-header-bg: #494949;
-  --color-primary: #343a40;
-  --color-point: #65a475;
+  --color-basic: #343a40;
+  --color-primary: #65a475;
   --color-outline1: #DDD;
   --color-outline2: #F0F0F0;
   --color-bg1: #F8F8F8;
 
   
   color-scheme: light;
-  color: var(--color-primary);
+  color: var(--color-basic);
   background-color: #f9fafb;
 }
 
