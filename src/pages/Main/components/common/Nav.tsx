@@ -91,7 +91,9 @@ function Nav() {
                     </div>
                     <ul className={styles.categoryList}>
                         <li>
-                            <span>커피/음료</span>
+                            <Link to="/detail/category">
+                                <span>커피/음료</span>
+                            </Link>
                         </li>
                         <li>
                             <span>상품권</span>
