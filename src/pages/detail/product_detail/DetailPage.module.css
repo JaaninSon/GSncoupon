@@ -1,0 +1,68 @@
+.wrap {
+  background-color: var(--color-outline2);
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem; /* --color-outline2: #F0F0F0 */
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.breadcrumbLink {
+  color: var(--color-gray); /* --color-gray: #999999 */
+  text-decoration: none;
+}
+
+.breadcrumbLink:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbSeparator {
+  margin: 0 0.5rem;
+  color: var(--color-gray);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-basic); /* --color-basic: #343a40 */
+}
+
+.productDetailContainer {
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 1rem;
+  color: var(--color-gray);
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 1rem;
+  color: var(--color-red); /* --color-red: #E10000 */
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.noteSection,
+.recommendSection {
+  margin-top: 2rem;
+  background-color: var(--color-white);
+  border-radius: 8px;
+}

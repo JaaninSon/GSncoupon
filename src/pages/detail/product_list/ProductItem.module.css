@@ -1,94 +1,99 @@
 .productCard {
-    width: 100%;
-    position: relative;
-    background-color: white;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    transition: all 0.3s;
-    max-width: 300px;
-    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.05);
-  }
-  
-  .productCard:hover {
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .imageContainer {
-    position: relative;
-    background-color: #f3f4f6;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    overflow: hidden;
-    height: 200px;
-  }
-  
-  .productImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .infoContainer {
-    padding: 0.75rem;
-  }
-  
-  .brandName {
-    margin-bottom: 0.2rem;
-  }
-  
-  .brandLink {
-    color: #4b5563;
-    font-weight: 500;
-    font-size: 0.875rem;
-    opacity: 0.5;
-  }
-  
-  .productName {
-    font-weight: 500;
-    color: #1f2937;
-    margin-bottom: 0;
-    overflow: hidden;
-    height: 2.4rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    font-size: 1.125rem;
-  }
-  
-  .priceContainer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-  }
-  
-  .originalPrice {
-    display: flex;
-    align-items: center;
-  }
-  
-  .originalPriceText {
-    color: #9ca3af;
-    text-decoration: line-through;
-    font-size: 0.875rem;
-  }
-  
-  .discountedPriceContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .discountedPrice {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  
-  .discountRate {
-    margin-top: 4px;
-    color: #dc2626;
-    font-weight: 700;
-    margin-left: 0.25rem;
-  }
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s;
+  max-width: 300px;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.05);
+  transform: scale(1);
+}
+
+.productCard:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.025);
+  border: 2px solid var(--color-primary);
+  border-radius: 0.75rem;
+}
+
+.imageContainer {
+  position: relative;
+  background-color: var(--color-outline2);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  overflow: hidden;
+  height: 200px;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoContainer {
+  padding: 0.75rem;
+}
+
+.brandName {
+  margin-bottom: 0.2rem;
+}
+
+.brandLink {
+  color: var(--color-gray);
+  font-weight: 500;
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+.productName {
+  font-weight: 500;
+  color: var(--color-basic);
+  margin-bottom: 0;
+  overflow: hidden;
+  height: 2.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 1.125rem;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.originalPrice {
+  display: flex;
+  align-items: center;
+}
+
+.originalPriceText {
+  color: var(--color-text-disabled);
+  text-decoration: line-through;
+  font-size: 0.875rem;
+}
+
+.discountedPriceContainer {
+  display: flex;
+  align-items: center;
+}
+
+.discountedPrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.discountRate {
+  margin-top: 4px;
+  color: var(--color-red);
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+
   
   .badgeContainer {
     margin-bottom: 0.5rem;

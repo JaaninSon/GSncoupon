@@ -117,7 +117,6 @@ export const ProductNameSearch: React.FC<{
 );
 
 // 유효기간 선택 컴포넌트
-// 유효기간 선택 컴포넌트 (박스 형태로 변경)
 export const DateRangeSelector: React.FC<{
     dateRange: string;
     onDateRangeChange: (value: string) => void;

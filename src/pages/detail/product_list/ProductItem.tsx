@@ -1,18 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./ProductItem.module.css";
-
-interface Product {
-    id: number;
-    coupon_name: string;
-    brand_name: string;
-    price: number;
-    category: string;
-    discount_rate: number;
-    image: string;
-    brand_image: string;
-    expiry_date: number | string;
-    location: string;
-}
+import { Product } from "../product_detail/types";
 
 interface ProductItemProps {
     product: Product;
@@ -44,64 +33,68 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, isLastColumn }) => {
     };
 
     return (
-        <div
-            className={styles.productCard}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            {/* 상품 이미지 영역 */}
-            <div className={styles.imageContainer}>
-                <img
-                    src={product.image}
-                    alt={product.coupon_name}
-                    className={styles.productImage}
-                />
-            </div>
+        <Link to={`/detail/product_detail/${product.id}`} className={styles.productLink}>
+            <div
+                className={styles.productCard}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                {/* 상품 이미지 영역 */}
+                <div className={styles.imageContainer}>
+                    <img
+                        src={product.image}
+                        alt={product.coupon_name}
+                        className={styles.productImage}
+                    />
+                </div>
 
-            {/* 상품 정보 영역 */}
-            <div className={styles.infoContainer}>
-                {/* <div className={styles.brandName}>
-                    <a href="#" className={styles.brandLink}>
-                        {product.brand_name}
-                    </a>
-                </div> */}
+                {/* 상품 정보 영역 */}
+                <div className={styles.infoContainer}>
+                    {/* <div className={styles.brandName}>
+                        <a href="#" className={styles.brandLink}>
+                            {product.brand_name}
+                        </a>
+                    </div> */}
 
-                {/* 상품명 */}
-                <h3 className={styles.productName}>{product.coupon_name}</h3>
+                    {/* 상품명 */}
+                    <h3 className={styles.productName}>{product.coupon_name}</h3>
 
-                {/* 가격 정보 */}
-                <div className={styles.priceContainer}>
-                    <div className={styles.originalPrice}>
-                        <span className={styles.originalPriceText}>
-                            {product.price
-                                ? product.price.toLocaleString() + "원"
-                                : "가격 정보 없음"}
+                    {/* 가격 정보 */}
+                    <div className={styles.priceContainer}>
+                        <div className={styles.originalPrice}>
+                            <span className={styles.originalPriceText}>
+                                {product.price
+                                    ? product.price.toLocaleString() + "원"
+                                    : "가격 정보 없음"}
+                            </span>
+                        </div>
+                        <div className={styles.discountedPriceContainer}>
+                            {product.price !== undefined ? (
+                                <>
+                                    <span className={styles.discountedPrice}>
+                                        {discountedPrice.toLocaleString()}원
+                                    </span>
+                                    <span className={styles.discountRate}>
+                                        -{product.discount_rate}%
+                                    </span>
+                                </>
+                            ) : (
+                                <span className={styles.discountedPrice}>할인가 없음</span>
+                            )}
+                        </div>
+                    </div>
+
+                    {/* 날짜 표기 배지 */}
+                    <div className={styles.badgeContainer}>
+                        <span
+                            className={`${styles.badge} ${getBadgeClassName(product.expiry_date)}`}
+                        >
+                            {product.expiry_date}일
                         </span>
                     </div>
-                    <div className={styles.discountedPriceContainer}>
-                        {product.price !== undefined ? (
-                            <>
-                                <span className={styles.discountedPrice}>
-                                    {discountedPrice.toLocaleString()}원
-                                </span>
-                                <span className={styles.discountRate}>
-                                    -{product.discount_rate}%
-                                </span>
-                            </>
-                        ) : (
-                            <span className={styles.discountedPrice}>할인가 없음</span>
-                        )}
-                    </div>
-                </div>
-
-                {/* 날짜 표기 배지 */}
-                <div className={styles.badgeContainer}>
-                    <span className={`${styles.badge} ${getBadgeClassName(product.expiry_date)}`}>
-                        {product.expiry_date}일
-                    </span>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

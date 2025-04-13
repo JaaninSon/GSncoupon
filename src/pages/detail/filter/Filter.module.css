@@ -1,263 +1,262 @@
 .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .title {
-    font-size: 1.875rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .filterContainer {
-    display: flex;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-  }
-  
-  .brandSection {
-    width: 60%;
-    border-right: 1px solid #d1d5db;
-  }
-  
-  .searchSection {
-    width: 40%;
-  }
-  
-  .sectionHeaderLeft {
-    background-color: #4b5563;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-weight: 600;
-    border-top-left-radius: 8px;
-  }
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .sectionHeaderRight {
-    background-color: #4b5563;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-weight: 600;
-    border-top-right-radius: 8px;
-  }
-  
-  .brandsGridWrapper {
-    position: relative; /* 기준을 Wrapper에 */
-  }
-  
-  .brandsGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
-    padding: 1rem;
-    max-height: 28rem;
-    overflow-y: auto;
-  }
-  
-  .fadeShadow {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    pointer-events: none;
-    z-index: 10;
-  }
-  
-  
-  .brandItem {
-    position: relative;
-    overflow: hidden;
-    padding: 0.75rem;
-    background-color: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    z-index: 1;
-  }
-  
-  .brandOverlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(34, 197, 94, 0.2); /* 연한 초록색 투명 레이어 */
-    pointer-events: none;
-    border-radius: 0.25rem;
-  }
-  
-  .brandItem:hover {
-    box-shadow: 0 0 0 2px #22c55e inset;
-  }
-  
-  .brandItemSelected {
-    box-shadow: 0 0 0 2px #22c55e inset;
-  }
-  
-  .brandLogo {
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-  }
-  
-  .brandImage {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  .brandName {
-    font-size: 0.75rem;
-    text-align: center;
-    font-weight: 500;
-  }
-  
-  .searchContent {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .filterGroup {
-    display: flex;
-    align-items: center;
-  }
-  
-  .filterLabel {
-    width: 25%;
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-  
-  .filterContent {
-    width: 75%;
-  }
-  
-  .priceButtonsGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.3rem;
-  }
-  
-  .priceButton {
-    border: 1px solid #d1d5db;
-    border-radius: 0.25rem;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: colors 0.2s;
-  }
-  
-  .priceButton:hover {
-    border-color: #9ca3af;
-  }
-  
-  .priceButtonSelected {
-    border-color: #16a34a;
-    background-color: #f0fdf4;
-    color: #16a34a;
-  }
-  
-  .priceInputContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .priceInput {
-    width: 100%;
-    border: 1px solid #d1d5db;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    font-size: 0.875rem;
-  }
-  
-  .priceInputActive {
-    border-color: #22c55e;
-  }
-  
-  .priceInputConnector {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-  
-  .discountContainer {
-    margin-bottom: 0.25rem;
-  }
-  
-  .rangeLabels {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.25rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  
-  .rangeLabel {
-    font-size: 0.75rem;
-  }
-  
-  .rangeSliderContainer {
-    position: relative;
-    padding-top: 0.25rem;
-  }
-  
-  .rangeSlider {
-    width: 100%;
-    height: 0.5rem;
-    border-radius: 0.5rem;
-    appearance: none;
-    cursor: pointer;
-    background-color: #e5e7eb;
-    
-  }
-  
-  .rangeSlider::-webkit-slider-thumb {
-    appearance: none;
-    width: 1rem;
-    height: 1rem;
-    background: #22c55e;
-    border-radius: 50%;
-  }
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
-  .rangeValueWrap {
-    width: 100%;
-    height: 0.5rem;
-  }
-  
-  .rangeValue {
-    text-align: right;
-    font-size: 0.875rem;
+.filterContainer {
+  display: flex;
+  border: 1px solid var(--color-outline1);
+  border-radius: 8px;
+}
 
-  }
-  
-  .productNameInput {
-    width: 100%;
-    border: 1px solid #d1d5db;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    font-size: 0.875rem;
-    margin-top: 8px;
-  }
-  
-  .productNameInputActive {
-    border-color: #22c55e;
-  }
-  
-  .productNameInputFocus {
-    border-color: #16a34a;
-    outline: none;
-  }
-  
+.brandSection {
+  width: 60%;
+  border-right: 1px solid var(--color-outline1);
+}
+
+.searchSection {
+  width: 40%;
+}
+
+.sectionHeaderLeft,
+.sectionHeaderRight {
+  background-color: var(--color-header-bg);
+  color: var(--color-white);
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.sectionHeaderLeft {
+  border-top-left-radius: 8px;
+}
+
+.sectionHeaderRight {
+  border-top-right-radius: 8px;
+}
+
+.brandsGridWrapper {
+  position: relative;
+}
+
+.brandsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
+  max-height: 28rem;
+  overflow-y: auto;
+}
+
+.fadeShadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to top, var(--color-white), rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 10;
+}
+
+.brandItem {
+  position: relative;
+  overflow: hidden;
+  padding: 0.75rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-outline2);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 1;
+}
+
+.brandOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(101, 164, 117, 0.2); /* primary 연한 레이어 */
+  pointer-events: none;
+  border-radius: 0.25rem;
+}
+
+.brandItem:hover,
+.brandItemSelected {
+  box-shadow: 0 0 0 2px var(--color-primary) inset;
+}
+
+.brandLogo {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.brandImage {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.brandName {
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.searchContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+}
+
+.filterLabel {
+  width: 25%;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.filterContent {
+  width: 75%;
+}
+
+.priceButtonsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.3rem;
+}
+
+.priceButton {
+  border: 1px solid var(--color-outline1);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: colors 0.2s;
+  background-color: var(--color-white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.priceButton:hover {
+  background-color: var(--color-outline1);
+}
+
+.priceButtonSelected {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.priceButtonSelected:hover {
+  background-color: #519864; /* 약간 더 진한 초록색 */
+}
+
+.priceInputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.priceInput {
+  width: 100%;
+  border: 1px solid var(--color-outline1);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.priceInputActive {
+  border-color: var(--color-primary);
+}
+
+.priceInputConnector {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.discountContainer {
+  margin-bottom: 0.25rem;
+}
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.rangeLabel {
+  font-size: 0.75rem;
+}
+
+.rangeSliderContainer {
+  position: relative;
+  padding-top: 0.25rem;
+}
+
+.rangeSlider {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  appearance: none;
+  cursor: pointer;
+  background-color: var(--color-outline2);
+}
+
+.rangeSlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+.rangeValueWrap {
+  width: 100%;
+  height: 0.5rem;
+}
+
+.rangeValue {
+  text-align: right;
+  font-size: 0.875rem;
+}
+
+.productNameInput {
+  width: 100%;
+  border: 1px solid var(--color-outline1);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  margin-top: 8px;
+}
+
+.productNameInputActive {
+  border-color: var(--color-primary);
+}
+
+.productNameInputFocus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
 .dateButtonsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -267,55 +266,55 @@
 
 .dateButton {
   padding: 8px 12px;
-  background-color: #fff;
-  border: 1px solid #d1d5db;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-outline1);
   border-radius: 4px;
   font-size: 14px;
-  color: #4b5563;
+  color: var(--color-basic);
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: center;
 }
 
 .dateButton:hover {
-  background-color: #d1d5db;
+  background-color: var(--color-outline1);
 }
 
 .dateButtonSelected {
-  background-color: #4ade80;
-  color: white;
-  border-color: #4ade80;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
 }
 
 .dateButtonSelected:hover {
-  background-color: #3bca70;
+  background-color: #519864; /* 약간 더 진한 초록색 */
 }
-  
-  .buttonsContainer {
-    padding-top: 1rem;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  
-  .resetButton {
-    flex: 1;
-    background-color: #f3f4f6;
-    color: #1f2937;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    font-weight: 500;
-    transition: background-color 0.2s;
-    border: 1px solid #d1d5db;
-    line-height: 1.5rem;
-  }
-  
-  .resetButton:hover {
-    background-color: #e5e7eb;
-  }
 
-  .resetButton svg{
-    vertical-align: middle;
-    margin-left: 0.5rem;
-    margin-top: -0.175rem;
-  }
+.buttonsContainer {
+  padding-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.resetButton {
+  flex: 1;
+  background-color: var(--color-bg1);
+  color: var(--color-basic);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  border: 1px solid var(--color-outline1);
+  line-height: 1.5rem;
+}
+
+.resetButton:hover {
+  background-color: var(--color-outline2);
+}
+
+.resetButton svg {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  margin-top: -0.175rem;
+}

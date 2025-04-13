@@ -1,0 +1,35 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .item {
+    font-size: 1rem;
+    color: var(--color-text-disabled);
+    padding-left: 0.5rem;
+    line-height: 1.5;
+  }
