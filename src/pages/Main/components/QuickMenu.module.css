@@ -1,0 +1,141 @@
+.quickMenu {
+   margin-top: 24px;
+   background: #ffffff;
+   border-radius: 16px;
+   padding: 24px 16px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+ }
+ 
+ .online {
+   position: relative;
+   display: flex;
+   align-items: center;
+   width: 100%;
+   box-sizing: border-box;
+   border: 3px solid #f0f0f0;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+.online > span {
+   position: relative;
+   width: 80px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: 0;
+   height: 36px;
+   padding-top: 20px;
+}
+
+.online > span::after {
+   content: "";
+   position: absolute;
+   top: -18px;
+   left: 8px;
+   width: 25px;
+   height: 25px;
+   opacity: 0.15;
+   background: #60a64d;
+   border-radius: 50%;
+}
+
+.onlineTitle {
+   margin-top: 12px;
+   color: #60a64d;
+   font-size: 14px;
+   font-weight: 700;
+}
+
+.onlineText {
+   margin-top: 6px;
+   position: relative;
+   width: calc(100% - 80px);
+   box-sizing: border-box;
+   padding-left: 14px;
+   font-size: 0.75rem;
+   color: #888;
+   line-height: 1.3;
+}
+
+.onlineText li {
+   position: relative;
+   box-sizing: border-box;
+   padding-left: 14px;
+   font-size: 13px;
+   color: #333;
+}
+
+.onlineText li + li{
+   margin-top: 5px;
+}
+
+.onlineText li::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 5px;
+   width: 3px;
+   height: 3px;
+   border: 2px solid #fff;
+   border-top-color: #555;
+   border-right-color: #555;
+   transform: rotate(45deg) translate(-1px, 1px);
+   border-radius: 2px 2px 0 0;
+}
+
+.cateList {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 10px;
+   list-style: none;
+   padding: 10px 15px;
+   margin: 20px 0 0 0;
+ }
+ 
+ .cateItem {
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+   align-items: center;
+   padding: 12px 8px;
+   background-color: #f7f9fb;
+   border-radius: 15px;
+   transition: transform 0.2s ease;
+   cursor: pointer;
+   
+ }
+ 
+ .cateItem:hover {
+   background-color: #b3e3a5;
+   transform: translateY(-4px);
+ }
+ 
+ .cateIcon img {
+   width: 30px;
+   height: 30px;
+   margin-bottom: 5px;
+   object-fit: contain;
+ }
+ 
+ .title {
+   display: flex;
+   align-items: center;
+   font-size: 0.8rem;
+   font-weight: 500;
+   text-align: center;
+   margin: 5px 0;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: normal;
+   word-break: keep-all;
+ }
+ 
+ @media (max-width: 600px) {
+   .cateList {
+      grid-template-columns: repeat(2, 1fr);
+   }
+ }
+
+ 

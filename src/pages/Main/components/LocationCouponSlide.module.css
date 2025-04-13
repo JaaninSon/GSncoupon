@@ -1,0 +1,124 @@
+* {
+  vertical-align: middle;
+}
+
+.wrapper {
+   margin-top: 1rem;
+   width: 100%;
+   padding: 16px;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+   background-color: #f5f7fa;
+   border-radius: 16px;
+ }
+
+ .titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+ }
+
+ .locationTag {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 2px 12px;
+  border-radius: 15px;
+  line-height: 1.8;
+  font-weight: 600;
+  font-size: 0.9rem;
+ }
+
+ .title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+ .notice {
+   color: #888;
+   font-size: 0.85rem;
+   margin: 0.5rem 0 1rem;
+   text-align: center;
+   line-height: 1.2;
+ }
+
+ .notice strong {
+  font-weight: bold;
+ }
+
+ .sliderWrap {
+  background-color: rgba(207, 217, 202, 0.332);
+  border-radius: 16px;
+  padding: 16px;
+ }
+ 
+ .slide {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+  
+ .couponCard {
+  width: 132px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+  cursor: pointer;
+ }
+
+ .couponCard:hover {
+  transform: translateY(-5px);
+}
+
+.couponCard img {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.couponText {
+  padding: 8px;
+  height: 70px;
+}
+
+.couponText p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.4em;
+  width: 100%;
+  /* display: -webkit-box; */
+  /* -webkit-line-clamp: 2; */
+  /* -webkit-box-orient: vertical; */
+  overflow: hidden;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  overflow: hidden;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.brand {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+ 

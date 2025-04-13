@@ -1,0 +1,91 @@
+* {
+   margin: 0;
+   padding: 0;
+   vertical-align: baseline;
+}
+
+
+.main {
+   position: relative;
+}
+
+
+.sectionContainer {
+   display: flex; 
+   max-width: 1560px;
+   margin: 0 auto 60px;
+}
+
+.mainSection {
+   width: calc(100% - 380px);
+   padding: 40px 40px 150px 0;
+   border-right: 1px solid #ddd;
+   box-sizing: border-box;
+}
+
+.mainProduct {
+   margin-top: 2rem;
+   padding: 0 1rem;
+   margin-bottom: 2rem;
+}
+
+.mainTitle {
+   margin-top: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.productList {
+   position: relative;
+}
+
+.mainAside {
+   position: relative;
+   width: 380px;
+   padding: 40px 0 10px 40px;
+   box-sizing: border-box;
+}
+
+.sticky {
+   position: sticky;
+    top: 10px;
+    left: 0;
+}
+
+.locationCoupon {
+   width: 100%;
+   margin-bottom: 50px;
+}
+
+.youtubeBox {
+   width: 100%;
+   margin-top: 20px;
+   background-color: #fff;
+   border-radius: 16px;
+   overflow: hidden;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+   aspect-ratio: 16/9;
+}
+
+.youtubeBox iframe {
+   width: 100%;
+   height: 100%;
+   border: 0;
+}
+
+@keyframes floatText {
+   0% {
+     transform: translateY(0);
+   }
+   100% {
+     transform: translateY(-5px);
+   }
+ }
+
+@media (max-width: 768px) {
+   .mainTitle h5 {
+      font-size: 1.2rem;
+   }
+}
+

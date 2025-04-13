@@ -1,0 +1,130 @@
+.footer {
+   position: relative;
+   background: #111;
+   color: #bbb;
+   font-size: 0.85rem;
+ }
+ 
+ .footerInner {
+   position: relative;
+   max-width: 1560px;
+   margin: 0 auto;
+   padding: 40px 20px;
+ }
+ 
+ .topSection {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 32px;
+ }
+ 
+ .logo {
+   height: 40px;
+ }
+ 
+ .linkNav span {
+   margin-right: 20px;
+   color: #ccc;
+   text-decoration: none;
+   font-size: 0.9rem;
+   cursor: pointer;
+ }
+
+ .linkNav span:last-child {
+   margin-right: 0;
+ }
+ 
+ .linkNav span:hover {
+   text-decoration: underline;
+ }
+ 
+ 
+ .middleSection {
+   display: flex;
+   margin-bottom: 30px;
+   flex-wrap: wrap;
+   gap: 20px;
+ }
+
+ .rightSection {
+   position: absolute;
+   text-align: right;
+   bottom: 78px;
+   right: 20px;
+ }
+ 
+ .infoBox h6 {
+   color: #fff;
+   font-weight: bold;
+   margin-bottom: 10px;
+ }
+ 
+ .infoBox p {
+   margin-bottom: 6px;
+ }
+ 
+ .subTitle {
+   margin-top: 20px;
+   font-size: 0.95rem;
+   color: #ddd;
+ }
+ 
+ .phone {
+   font-size: 1.8rem;
+   font-weight: bold;
+   color: #fff;
+   margin: 8px 0;
+ }
+ 
+ .noticeSection {
+   margin-bottom: 20px;
+ }
+ 
+ .noticeSection strong {
+   color: #fff;
+   font-size: 0.95rem;
+   display: block;
+   margin-bottom: 8px;
+ }
+ 
+ .noticeSection p {
+   margin-bottom: 8px;
+ }
+ 
+ .noticeSection span {
+   text-decoration: underline;
+   font-size: 0.85rem;
+   cursor: pointer;
+ }
+ 
+ .copyRight {
+   text-align: center;
+   color: #666;
+   font-size: 0.75rem;
+ }
+ 
+ @media (max-width: 768px) {
+   .topSection {
+     flex-direction: column;
+     gap: 16px;
+   }
+ 
+   .middleSection {
+     flex-direction: column;
+     gap: 20px;
+   }
+
+   .rightSection {
+      position: relative;
+      margin-top: 100px;
+      text-align: center;
+      flex-direction: column;
+      gap: 20px;
+   }
+ 
+   .logo {
+     margin-bottom: 8px;
+   }
+ }
+ 

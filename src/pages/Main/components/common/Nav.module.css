@@ -1,3 +1,11 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+* {
+   font-family: "Nanum Gothic", Nanum Gothic, '돋움', Dotum, Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+}
 
 .mainBanner {
    max-width: 100%;
@@ -61,8 +69,6 @@
    justify-content: space-between;
    padding: 30px 10px 30px 10px;
 }
-
-
 
 .logo {
    font-size: 24px;
@@ -203,6 +209,6 @@
    align-items: center;
    justify-content: space-evenly;
    font-size: 18px;
-   font-weight: 400;
+   font-weight: 500;
 }
 

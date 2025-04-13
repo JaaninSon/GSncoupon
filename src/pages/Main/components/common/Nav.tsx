@@ -2,7 +2,7 @@ import React from "react";
 import { useRecoilState } from "recoil";
 import styles from "./Nav.module.css";
 import { Link } from "react-router-dom";
-import { loginState } from "../../constants/loginState";
+import { loginState } from "../../../../constants/loginState";
 import AuthBtn from "./AuthBtn";
 
 function Nav() {
@@ -57,10 +57,10 @@ function Nav() {
                                 </div>
                             </li>
                             <li>
-                                <div className={styles.userInfoIcon}>
+                                <Link to="/cart" className={styles.userInfoIcon}>
                                     <img src="/assets/NavImg/hd_cart.png" />
                                     장바구니
-                                </div>
+                                </Link>
                             </li>
                             <li>
                                 <div className={styles.userInfoIcon}>
