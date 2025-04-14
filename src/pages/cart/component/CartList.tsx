@@ -92,8 +92,12 @@ export default function CartList() {
                 </div>
             </div>
             <div className={styles.buttons}>
-                <Button btnType={btnType.Black}>견적서작성</Button>
-                <Button btnType={btnType.Green}>바로구매</Button>
+                <Button btnType={btnType.Black} onClick={() => alert(`Coming soon!`)}>
+                    견적서작성
+                </Button>
+                <Button btnType={btnType.Green} onClick={() => alert(`Coming soon!`)}>
+                    바로구매
+                </Button>
             </div>
         </div>
     );
