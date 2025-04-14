@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useRecoilState } from "recoil";
 import styles from "./Nav.module.css";
 import { Link } from "react-router-dom";
@@ -8,6 +8,24 @@ import AuthBtn from "./AuthBtn";
 function Nav() {
     const [isLoggedIn, setIsLoggedIn] = useRecoilState(loginState);
     // console.log("isLoggedIn:", isLoggedIn);  // data 확인용
+
+    const [isMobile, setIsMobile] = useState(false);
+    const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+
+    useEffect(() => {
+        const handleReszie = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener("resize", handleReszie);
+        handleReszie();
+
+        return () => window.removeEventListener("resize", handleReszie);
+    }, []);
+
+    const toggleCategory = () => {
+        setIsCategoryOpen((prev) => !prev);
+    };
 
     return (
         <>
@@ -82,44 +100,55 @@ function Nav() {
                 {/* gnb 는 경로설정이 안되어 span 으로 감쌌습니다. 경로 설정하게 되면 Link 태그로 변경 */}
                 <div className={styles.headerGnb}>
                     <div className={styles.allCategory}>
-                        <div>
-                            전체상품보기
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
+                        {isMobile && (
+                            <button className={styles.hamburgerBtn} onClick={toggleCategory}>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        )}
+                        {!isMobile && (
+                            <span className={styles.hamText}>
+                                전체상품보기
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        )}
                     </div>
-                    <ul className={styles.categoryList}>
-                        <li>
-                            <Link to="/detail/category">
-                                <span>커피/음료</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <span>상품권</span>
-                        </li>
-                        <li>
-                            <span>배달/페이</span>
-                        </li>
-                        <li>
-                            <span>편의점/마트</span>
-                        </li>
-                        <li>
-                            <span>치킨/피자/버거</span>
-                        </li>
-                        <li>
-                            <span>빵/아이스크림</span>
-                        </li>
-                        <li>
-                            <span>주유/결합쿠폰</span>
-                        </li>
-                        <li>
-                            <span>문화/생활</span>
-                        </li>
-                        <li>
-                            <span>외식</span>
-                        </li>
-                    </ul>
+                    {(isMobile ? isCategoryOpen : true) && (
+                        <ul className={styles.categoryList}>
+                            <li>
+                                <Link to="/detail/category">
+                                    <span>커피/음료</span>
+                                </Link>
+                            </li>
+                            <li>
+                                <span>상품권</span>
+                            </li>
+                            <li>
+                                <span>배달/페이</span>
+                            </li>
+                            <li>
+                                <span>편의점/마트</span>
+                            </li>
+                            <li>
+                                <span>치킨/피자/버거</span>
+                            </li>
+                            <li>
+                                <span>빵/아이스크림</span>
+                            </li>
+                            <li>
+                                <span>주유/결합쿠폰</span>
+                            </li>
+                            <li>
+                                <span>문화/생활</span>
+                            </li>
+                            <li>
+                                <span>외식</span>
+                            </li>
+                        </ul>
+                    )}
                 </div>
             </div>
         </>

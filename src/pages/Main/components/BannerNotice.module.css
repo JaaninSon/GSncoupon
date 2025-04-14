@@ -89,14 +89,14 @@
  @media (max-width: 768px) {
    .layoutRow {
       flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
       gap: 24px;
    }
 
-   .banner {
+   .banner, .notice {
       width: 100%;
+      max-width: 600px;
    }
 
-   .notice {
-      width: 100%;
-   }
  }

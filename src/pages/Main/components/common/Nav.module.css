@@ -64,6 +64,7 @@
    max-width: 1560px;
    height: 120px;
    margin: 0 auto;
+   margin-bottom: 10px;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -82,13 +83,13 @@
 
 .searchHeader {
    position: absolute;
-    top: 55.5%;
-    left: 51.4%;
-    transform: translate(calc(-50% - 0.5px), calc(-50% - 0.5px));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 455px;
     z-index: 10;
     background: url(/assets/NavImg/search_box.png) no-repeat left center;
-    background-size: auto;
+    background-size: contain;
 }
 
 .searchHeader::before {
@@ -160,13 +161,13 @@
    justify-content: space-between;
 }
 
-
 .headerGnb {
    display: flex;
    align-items: center;
    height: 54px;
    max-width: 1560px;
    margin: 0 auto;
+   margin-top: 10px;
    cursor: pointer;
 }
 
@@ -181,7 +182,28 @@
    padding-left: 40px;
 }
 
-.allCategory span {
+.hamburgerBtn {
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 24px;
+   height: 18px;
+   background: none;
+   border: none;
+   cursor: pointer;
+   padding: 0;
+}
+
+.hamburgerBtn span {
+   display: block;
+   width: 100%;
+   height: 2px;
+   background-color: #68b453;
+   border-radius: 1px;
+}
+
+
+.hamText span {
    position: absolute;
    top: 3px;
    left: 0;
@@ -191,12 +213,12 @@
    transition: all 0.4s;
 }
 
-.allCategory span:nth-child(2) {
+.hamText span:nth-child(2) {
    top: 50%;
    transform: translateY(-50%);
 }
 
-.allCategory span:nth-child(3) {
+.hamText span:nth-child(3) {
    top: auto;
    bottom: 3px;
 }
@@ -212,3 +234,159 @@
    font-weight: 500;
 }
 
+
+@media (max-width: 1024px) {
+   .headerContainer {
+      height: auto;
+      padding: 20px 10px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .headerMenu {
+      width: 100%;
+      justify-content: center;
+      font-size: 13px;
+      margin-bottom: 10px;
+   }
+
+   .headerContents {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      gap: 16px;
+   }
+  
+    .userInfo {
+      width: 100%;
+      justify-content: center;
+      margin-top: 100px;
+    }
+  
+    .headerGnb {
+      flex-direction: column;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .hamText {
+      display: none;
+    }
+    
+  
+    .categoryList {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .allCategory {
+      width: 130px;
+      font-size: 18px;
+      padding-left: 30px;
+    }
+    
+    .allCategory span {
+      width: 16px;
+      height: 2px;
+    }
+  
+}
+
+@media (max-width: 768px) {
+   .headerContainer {
+      position: relative;
+   }
+
+   .logo img {
+     width: 120px;
+     height: auto;
+   }
+ 
+   .searchHeader {
+      width: 260px;
+      background-size: contain;
+   }
+ 
+   .input {
+     padding: 0 10px;
+     font-size: 13px;
+   }
+ 
+   .searchBtn {
+     right: 10px;
+     width: 18px;
+     height: 18px;
+   }
+ 
+   .userInfoIcon {
+     flex-direction: row;
+     font-size: 13px;
+   }
+ 
+   .userInfoIcon img {
+     width: 24px;
+     height: 24px;
+     margin: 0 6px 0 0;
+   }
+  
+   .headerGnb {
+      position: absolute;
+      z-index: 20;
+      top: 0;
+      left: -40%;
+     width: 100%;
+     padding: 0 10px;
+   }
+ 
+
+   .allCategory {
+      width: 110px;
+      font-size: 16px;
+      padding-left: 25px;
+   }
+
+   .hamburgerBtn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      background: none;
+      border: none;
+      cursor: pointer;
+  }
+
+  .hamburgerBtn span {
+   display: block;
+   width: 100%;
+   height: 2px;
+   background-color: #68b453;
+   }
+
+  .categoryList {
+      top: 10px;
+      left: 10%;
+      width: 300px;
+      background-color: #fff;
+      flex-direction: column;
+      gap: 0;
+      padding: 10px 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   }
+
+  .categoryList li {
+   width: 100%;
+      padding: 10px;
+      text-align: center;
+   }
+
+  .categoryList li:hover{
+   background-color: #68b453;
+   color: #fff;
+   }
+ }

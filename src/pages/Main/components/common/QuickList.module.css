@@ -118,3 +118,14 @@
       transform: translateY(0);
    }
 }
+
+@media (max-width: 768px) {
+   .productHistory {
+      visibility: hidden;
+   }
+
+   .quickList {
+      top: 55%;
+      right: 2px;
+   }
+}
