@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ProductRecommend.module.css";
-import { Product, ProductRecommendProps } from "./types";
+import type { Product, ProductRecommendProps } from "./types";
 import { useProducts } from "../data/productData";
 
 const ProductItem: React.FC<{ product: Product }> = ({ product }) => {
@@ -66,8 +66,6 @@ const ProductItem: React.FC<{ product: Product }> = ({ product }) => {
         </a>
     );
 };
-
-// ProductRecommend 컴포넌트는 변경 없음
 
 const ProductRecommend: React.FC<ProductRecommendProps> = ({ category, currentProductId }) => {
     const [recommendedProducts, setRecommendedProducts] = useState<Product[]>([]);
