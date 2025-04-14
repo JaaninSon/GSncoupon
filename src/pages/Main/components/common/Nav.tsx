@@ -4,6 +4,7 @@ import styles from "./Nav.module.css";
 import { Link } from "react-router-dom";
 import { loginState } from "../../../../constants/loginState";
 import AuthBtn from "./AuthBtn";
+import { useRecommendedProducts } from "../../hooks/useRecommendedProducts";
 
 function Nav() {
     const [isLoggedIn, setIsLoggedIn] = useRecoilState(loginState);
@@ -13,14 +14,14 @@ function Nav() {
     const [isCategoryOpen, setIsCategoryOpen] = useState(false);
 
     useEffect(() => {
-        const handleReszie = () => {
+        const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
 
-        window.addEventListener("resize", handleReszie);
-        handleReszie();
+        window.addEventListener("resize", handleResize);
+        handleResize();
 
-        return () => window.removeEventListener("resize", handleReszie);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     const toggleCategory = () => {
