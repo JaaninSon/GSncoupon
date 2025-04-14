@@ -15,8 +15,8 @@
 }
 
 .historyTitle {
-   border: 1px solid #ddd;
-   background: #fff;
+   border: 1px solid var(--color-outline1);
+   background: var(--color-white);
 }
 
 .historyTitle > dt {
@@ -37,8 +37,8 @@
 }
 
 .historyTitle > dt + dt {
-   border-top: 1px solid #ddd;
-   border-bottom: 1px solid #ddd;
+   border-top: 1px solid var(--color-outline1);
+   border-bottom: 1px solid var(--color-outline1);
 }
 
 .historyTitle > dd {
@@ -62,7 +62,7 @@
    width: 100%;
    aspect-ratio: auto 1;
    overflow: hidden;
-   border: 1px solid #eee;
+   border: 1px solid var(--color-outline3);
    border-radius: 5px;
    margin: 0 0 10px;
 }
@@ -79,7 +79,7 @@
    justify-content: center;
    width: 55px;
    height: 55px;
-   background: rgb(104, 180, 83);
+   background: var(--color-brand1);
    border-radius: 100%;
    border: 0;
    cursor: pointer;
@@ -93,7 +93,7 @@
 
 .goTop span {
    font-size: 12px;
-   color: #fff;
+   color: var(--color-white);
    letter-spacing: 1px;
    font-weight: 600;
 }

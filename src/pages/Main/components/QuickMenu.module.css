@@ -1,6 +1,6 @@
 .quickMenu {
    margin-top: 24px;
-   background: #ffffff;
+   background: var(--color-white);
    border-radius: 16px;
    padding: 24px 16px;
    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -37,13 +37,13 @@
    width: 25px;
    height: 25px;
    opacity: 0.15;
-   background: #60a64d;
+   background: var(--color-brand1);
    border-radius: 50%;
 }
 
 .onlineTitle {
    margin-top: 12px;
-   color: #60a64d;
+   color: var(--color-brand1);
    font-size: 14px;
    font-weight: 700;
 }
@@ -78,7 +78,7 @@
    top: 5px;
    width: 3px;
    height: 3px;
-   border: 2px solid #fff;
+   border: 2px solid var(--color-white);
    border-top-color: #555;
    border-right-color: #555;
    transform: rotate(45deg) translate(-1px, 1px);

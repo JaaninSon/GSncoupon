@@ -1,5 +1,9 @@
+.productSlider {
+  width: 100%;
+}
+
 .productCard {
-   background: #fff;
+   background: var(--color-white);
    border-radius: 10px;
    overflow: hidden;
    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -29,6 +33,6 @@
    display: inline-block;
    margin-top: 0.25rem;
    font-size: 0.9rem;
-   color: #ff3333;
+   color: var(--color-red);
  }
  

@@ -1,6 +1,7 @@
 .bannerSwiper {
    width: 100%;
-   height: 390px;
+   /* height: 390px; */
+   height: auto;
 }
 
 .bannerSwiper .swiperSlide {
@@ -14,4 +15,17 @@
    height: 100%;
    object-fit: cover;
    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+   .bannerSwiper {
+      aspect-ratio: 4 / 1;
+   }
+
+   .bannerSwiper img {
+
+      object-fit: contain;
+
+   }
+
 }

@@ -12,15 +12,20 @@
   --color-white: #fff;
   --color-black: #000;
   --color-red: #E10000;
+  --color-blue: #1e90ff;
   --color-gray: #999999;
+  
 
   --color-text-disabled: #AAA;
 
   --color-header-bg: #494949;
   --color-basic: #343a40;
   --color-primary: #65a475;
+  --color-brand1: #68b435;
+  --color-brand2: #35b4a0;
   --color-outline1: #DDD;
   --color-outline2: #F0F0F0;
+  --color-outline3: #eee;
   --color-bg1: #F8F8F8;
 
   
@@ -28,6 +33,7 @@
   color: var(--color-basic);
   background-color: #f9fafb;
 }
+
 
 * {
   box-sizing: border-box;

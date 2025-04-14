@@ -55,7 +55,7 @@
  }
  
  .infoBox h6 {
-   color: #fff;
+   color: var(--color-white);
    font-weight: bold;
    margin-bottom: 10px;
  }
@@ -73,7 +73,7 @@
  .phone {
    font-size: 1.8rem;
    font-weight: bold;
-   color: #fff;
+   color: var(--color-white);
    margin: 8px 0;
  }
  
@@ -82,7 +82,7 @@
  }
  
  .noticeSection strong {
-   color: #fff;
+   color: var(--color-white);
    font-size: 0.95rem;
    display: block;
    margin-bottom: 8px;

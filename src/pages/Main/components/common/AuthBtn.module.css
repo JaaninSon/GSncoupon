@@ -2,7 +2,7 @@
    width: 120px;
    padding: 0 30px;
    height: 45px;
-   background-color: #fff;
+   background-color: var(--color-white);
    border: 1px solid #aaa;
    color: #666;
    font-size: 15px;
