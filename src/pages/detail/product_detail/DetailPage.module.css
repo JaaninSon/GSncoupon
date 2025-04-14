@@ -62,7 +62,7 @@
 
 .noteSection,
 .recommendSection {
-  margin-top: 2rem;
+  padding: 3rem;
   background-color: var(--color-white);
   border-radius: 8px;
 }
