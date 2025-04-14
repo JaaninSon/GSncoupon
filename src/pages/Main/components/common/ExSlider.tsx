@@ -60,7 +60,7 @@ function ExSlider({ type }: SliderProps) {
                 loop={true}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
                 className={styles.productSlider}
-                breakpoint={{
+                /*  breakpoint={{
                     0: {
                         slidesPerView: 2,
                         spaceBetween: 12,
@@ -69,7 +69,7 @@ function ExSlider({ type }: SliderProps) {
                         slidesPerView: 4,
                         spaceBetween: 16,
                     },
-                }}
+                }} */
             >
                 {type === "best" &&
                     bestSelling.map((item) => (
