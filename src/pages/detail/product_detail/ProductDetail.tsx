@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./ProductDetail.module.css";
-import { Product, ProductDetailProps } from "./types";
+import type { ProductDetailProps } from "./types";
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ product, onAddToCart, onBuyNow }) => {
     const [quantity, setQuantity] = useState<number>(1);
