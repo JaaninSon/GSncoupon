@@ -6,7 +6,7 @@ function QuickMenu() {
     return (
         <div className={styles.quickMenu}>
             {/* router 견적서페이지로 */}
-            <Link to="/" className={styles.online}>
+            <Link to="/cart" className={styles.online}>
                 <span>
                     <img
                         src={`https://www.gsncoupon.co.kr/resources/pc/images/renewal/main_quick_cate_login01.png`}
