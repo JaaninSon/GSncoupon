@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -73,13 +74,16 @@ function LocationCouponSlide() {
                 >
                     {coupons.map((coupon) => (
                         <SwiperSlide key={coupon.id} className={styles.slide}>
-                            <div className={styles.couponCard}>
+                            <Link
+                                to={`/detail/product_detail/${coupon.id}`}
+                                className={styles.couponCard}
+                            >
                                 <img src={coupon.image} alt={coupon.coupon_name} />
                                 <div className={styles.couponText}>
                                     <p>{coupon.coupon_name}</p>
                                     <span className={styles.brand}>{coupon.brand_name}</span>
                                 </div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
                     ))}
                 </Swiper>
