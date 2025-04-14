@@ -81,10 +81,12 @@ function Nav() {
                                 </Link>
                             </li>
                             <li>
-                                <div className={styles.userInfoIcon}>
-                                    <img src="/assets/NavImg/hd_online.png" />
-                                    온라인견적서
-                                </div>
+                                <Link to="/cart">
+                                    <div className={styles.userInfoIcon}>
+                                        <img src="/assets/NavImg/hd_online.png" />
+                                        온라인견적서
+                                    </div>
+                                </Link>
                             </li>
                         </ul>
                     ) : (

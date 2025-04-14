@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Badge from "./common/Badge";
 import styles from "./ProductItem.module.css";
 
@@ -19,10 +20,14 @@ export default function ProductItem({ product }: ProductItemProps) {
 
     return (
         <div className={styles.container}>
-            <img src={product.image} alt={product.coupon_name} />
+            <Link to={`/detail/product_detail/${product.id}`}>
+                <img src={product.image} alt={product.coupon_name} />
+            </Link>
             <div className={styles.info}>
                 <Badge date={product.expiry_date} isMini={true} />
-                <div className={styles.name}>{product.coupon_name}</div>
+                <div className={styles.name}>
+                    <Link to={`/detail/product_detail/${product.id}`}>{product.coupon_name}</Link>
+                </div>
                 <div className={styles.price}>
                     <span className={styles.originalPrice}>{product.price.toLocaleString()}원</span>
                     {discountedPrice.toLocaleString()}원

@@ -5,10 +5,12 @@
 }
 
 .container img {
+  display: flex;
   width: 90px;
   height: 90px;
   border-radius: 8px;
   cursor: pointer;
+  align-items: center;
 }
 
 .info {
