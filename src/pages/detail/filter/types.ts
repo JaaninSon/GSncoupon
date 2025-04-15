@@ -1,4 +1,4 @@
-import { Brand, PriceRangeOption, FilterMode } from "../../types";
+import { Brand, PriceRangeOption } from "../types/index";
 
 // BrandFilter 컴포넌트 Props
 export interface BrandFilterProps {

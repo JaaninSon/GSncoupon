@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./BannerSlide.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";

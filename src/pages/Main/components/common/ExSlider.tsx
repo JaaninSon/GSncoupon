@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./ExSlider.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Autoplay } from "swiper/modules";
