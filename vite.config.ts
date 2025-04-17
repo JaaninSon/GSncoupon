@@ -2,10 +2,10 @@ import { defineConfig } from "vite";
 import reactPlugin from "@vitejs/plugin-react";
 import { resolve } from "path";
 
-const reactPlugin = react.default ?? react;
+const react = (reactPlugin as any).default || reactPlugin;
 
 export default defineConfig({
-    plugins: [reactPlugin()],
+    plugins: [react()],
     resolve: {
         alias: {
             "@": resolve(__dirname, "src"),
