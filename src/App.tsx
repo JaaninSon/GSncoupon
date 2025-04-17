@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import MainPage from "./pages/Main/MainPage";
+import MainPage from "./pages/Main/views/MainPage";
 import { FilterProvider } from "./pages/detail/filter/FilterContext";
 import Nav from "./pages/Main/components/common/Nav";
 import CartPage from "./pages/cart/CartPage";
@@ -12,19 +12,10 @@ function App() {
             <FilterProvider>
                 <Nav />
                 <Routes>
-                    {/* <Route path="/" element={<MainPage />} /> */}
+                    <Route path="/" element={<MainPage />} />
                     <Route path="/cart" element={<CartPage />} />
                     <Route path="/detail/product_detail/:productId" element={<DetailPage />} />
                     <Route path="/detail/category" element={<CategoryPage />} />
-
-                    {/* <div className="app">
-                    <div className="container">
-                        <Filter />
-                        <div className="product-section">
-                            <ProductList />
-                        </div>
-                    </div>
-                </div> */}
                 </Routes>
             </FilterProvider>
         </BrowserRouter>
