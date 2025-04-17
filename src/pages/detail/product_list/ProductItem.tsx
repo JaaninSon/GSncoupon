@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProductItem.module.css";
 import { Product } from "../product_detail/types";
@@ -8,12 +8,12 @@ interface ProductItemProps {
     isLastColumn?: boolean;
 }
 
-const ProductItem: React.FC<ProductItemProps> = ({ product, isLastColumn }) => {
-    const [isHovered, setIsHovered] = useState<boolean>(false);
+const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
+    // const [isHovered, setIsHovered] = useState<boolean>(false);
 
-    // 마우스 오버/아웃 핸들러
-    const handleMouseEnter = () => setIsHovered(true);
-    const handleMouseLeave = () => setIsHovered(false);
+    // // 마우스 오버/아웃 핸들러
+    // const handleMouseEnter = () => setIsHovered(true);
+    // const handleMouseLeave = () => setIsHovered(false);
 
     // 할인가 계산
     const discountedPrice = Math.floor(product.price * (1 - product.discount_rate / 100));
@@ -36,8 +36,8 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, isLastColumn }) => {
         <Link to={`/detail/product_detail/${product.id}`} className={styles.productLink}>
             <div
                 className={styles.productCard}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                // onMouseEnter={handleMouseEnter}
+                // onMouseLeave={handleMouseLeave}
             >
                 {/* 상품 이미지 영역 */}
                 <div className={styles.imageContainer}>

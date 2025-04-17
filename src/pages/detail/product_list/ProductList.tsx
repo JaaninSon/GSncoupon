@@ -24,11 +24,6 @@ const ProductList: React.FC = () => {
     // 페이지 변경 핸들러
     const handlePageChange = (pageNumber: number) => {
         setCurrentPage(pageNumber);
-        // 페이지 상단으로 스크롤
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
     };
 
     // 로딩 및 오류 처리
@@ -96,18 +91,30 @@ const ProductList: React.FC = () => {
                             이전
                         </button>
 
-                        {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-                            const pageNum = i + 1;
-                            return (
-                                <button
-                                    key={i}
-                                    className={`${styles.pageButton} ${currentPage === pageNum ? styles.activePage : ""}`}
-                                    onClick={() => handlePageChange(pageNum)}
-                                >
-                                    {pageNum}
-                                </button>
-                            );
-                        })}
+                        {(() => {
+                            // 표시할 페이지 버튼의 시작 번호와 끝 번호 계산
+                            let startPage = Math.max(1, currentPage - 2);
+                            let endPage = Math.min(totalPages, startPage + 4);
+
+                            // 페이지 버튼이 5개가 되도록 조정
+                            if (endPage - startPage < 4) {
+                                startPage = Math.max(1, endPage - 4);
+                            }
+
+                            // 페이지 버튼 생성
+                            return Array.from({ length: endPage - startPage + 1 }, (_, i) => {
+                                const pageNum = startPage + i;
+                                return (
+                                    <button
+                                        key={i}
+                                        className={`${styles.pageButton} ${currentPage === pageNum ? styles.activePage : ""}`}
+                                        onClick={() => handlePageChange(pageNum)}
+                                    >
+                                        {pageNum}
+                                    </button>
+                                );
+                            });
+                        })()}
 
                         <button
                             className={styles.pageButton}

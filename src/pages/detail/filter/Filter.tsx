@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import BrandFilter from "./BrandFilter";
 import SearchCondition from "./SearchCondition";
-import { priceRangeOptions } from "../data/brandsData";
+import { priceRangeOptions, useBrands } from "../data/brandsData";
 import { useFilter } from "./FilterContext";
 import styles from "./Filter.module.css";
 
@@ -26,6 +26,7 @@ const Filter: React.FC<FilterProps> = ({ className }) => {
 
     // 선택된 가격대 버튼 상태
     const [selectedPriceRange, setSelectedPriceRange] = useState("");
+    const { brands, loading, error } = useBrands();
 
     // 가격 범위가 변경되면 선택된 가격대 버튼 상태 업데이트
     useEffect(() => {
@@ -129,7 +130,17 @@ const Filter: React.FC<FilterProps> = ({ className }) => {
 
             <div className={styles.filterContainer}>
                 {/* 브랜드 필터 */}
-                <BrandFilter selectedBrands={selectedBrands} onBrandClick={handleBrandClick} />
+                {loading ? (
+                    <div>브랜드 데이터를 불러오는 중...</div>
+                ) : error ? (
+                    <div>{error}</div>
+                ) : (
+                    <BrandFilter
+                        selectedBrands={selectedBrands}
+                        onBrandClick={handleBrandClick}
+                        brands={brands}
+                    />
+                )}
 
                 {/* 검색 조건 */}
                 <SearchCondition

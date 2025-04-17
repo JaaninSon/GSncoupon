@@ -1,21 +1,9 @@
-import React, { useState } from "react";
 import styles from "./ProductDetail.module.css";
 import type { ProductDetailProps } from "./types";
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ product, onAddToCart, onBuyNow }) => {
-    const [quantity, setQuantity] = useState<number>(1);
-
     // 할인가 계산
     const discountedPrice = Math.floor(product.price * (1 - product.discount_rate / 100));
-    const totalPrice = discountedPrice * quantity;
-
-    // 수량 증가/감소 핸들러
-    const handleIncreaseQuantity = () => setQuantity((prev) => prev + 1);
-    const handleDecreaseQuantity = () => {
-        if (quantity > 1) {
-            setQuantity((prev) => prev - 1);
-        }
-    };
 
     // 날짜에 따른 배지 스타일 클래스 결정
     const getBadgeClassName = (days: number | string): string => {
@@ -85,10 +73,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onAddToCart, onB
                     <button className={styles.orderButton} onClick={() => onAddToCart(product, 1)}>
                         주문하기
                     </button>
-                    <button
-                        className={styles.directBuyButton}
-                        onClick={() => onAddToCart(product, 1)}
-                    >
+
+                    <button className={styles.directBuyButton} onClick={() => onBuyNow(product, 1)}>
                         전적서 출력
                     </button>
                     <button

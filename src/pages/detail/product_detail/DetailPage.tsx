@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styles from "./DetailPage.module.css";
 import ProductDetail from "./ProductDetail";
 import Note from "./Note";
@@ -10,7 +10,7 @@ import { useProducts } from "../data/productData";
 const DetailPage: React.FC = () => {
     // 라우터 훅
     const { productId } = useParams<{ productId: string }>();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     // 상태 관리
     const [product, setProduct] = useState<Product | null>(null);
@@ -31,9 +31,8 @@ const DetailPage: React.FC = () => {
     }, [productId, products, loading]);
 
     // 상품 관련 핸들러
-    const handleAddToCart = () => {
-        alert(`Coming soon!`);
-        //
+    const handleBuyNow = () => {
+        alert(`구매 기능이 곧 추가될 예정입니다.`);
     };
 
     // 로딩 상태 처리
@@ -71,7 +70,11 @@ const DetailPage: React.FC = () => {
 
                     {/* 상품 상세 정보 */}
                     <div className={styles.productDetailContainer}>
-                        <ProductDetail product={product} onAddToCart={handleAddToCart} />
+                        <ProductDetail
+                            product={product}
+                            onAddToCart={handleBuyNow}
+                            onBuyNow={handleBuyNow}
+                        />
                     </div>
                 </div>
             </div>
