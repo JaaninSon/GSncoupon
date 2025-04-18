@@ -101,6 +101,7 @@
    align-items: center;
    padding: 12px 8px;
    background-color: #f7f9fb;
+   border: 3px solid transparent;
    border-radius: 15px;
    transition: transform 0.2s ease;
    cursor: pointer;
@@ -108,7 +109,7 @@
  }
  
  .cateItem:hover {
-   background-color: #b3e3a5;
+   border: 3px dashed var(--color-brand1);
    transform: translateY(-4px);
  }
  
@@ -117,6 +118,11 @@
    height: 30px;
    margin-bottom: 5px;
    object-fit: contain;
+   
+ }
+
+ .cateItem:hover .cateIcon img{
+   /* filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(139deg) brightness(102%) contrast(103%); */
  }
  
  .title {
@@ -136,6 +142,7 @@
    .cateList {
       grid-template-columns: repeat(2, 1fr);
    }
+
  }
 
  
