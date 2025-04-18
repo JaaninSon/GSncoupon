@@ -99,7 +99,7 @@
  }
  
  .copyRight {
-   text-align: center;
+   text-align: left;
    color: #666;
    font-size: 0.75rem;
  }
@@ -117,8 +117,10 @@
 
    .rightSection {
       position: relative;
-      margin-top: 100px;
-      text-align: center;
+      bottom: 30px;
+      margin-top: 50px;
+      padding-left: 20px;
+      text-align: left;
       flex-direction: column;
       gap: 20px;
    }

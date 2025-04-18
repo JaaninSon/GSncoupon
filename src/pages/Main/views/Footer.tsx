@@ -9,7 +9,9 @@ function Footer() {
                     <nav className={styles.linkNav}>
                         <span>회사소개</span>
                         <span>이용약관</span>
-                        <span>개인정보처리방침</span>
+                        <span>
+                            <b>개인정보처리방침</b>
+                        </span>
                         <span>사이트맵</span>
                         <span>패밀리 사이트</span>
                     </nav>
